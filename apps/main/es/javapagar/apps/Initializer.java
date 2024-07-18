@@ -1,13 +1,13 @@
-package es.javapagar.ddd_java;
+package es.javapagar.apps;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class DddJavaApplication {
+public class Initializer {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DddJavaApplication.class, args);
+		SpringApplication.run(Initializer.class, args);
 	}
 
 }

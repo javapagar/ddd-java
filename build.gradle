@@ -1,5 +1,6 @@
 plugins {
 	id 'java'
+	id 'application'
 	id 'org.springframework.boot' version '3.3.1'
 	id 'io.spring.dependency-management' version '1.1.5'
 }
@@ -25,4 +26,26 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+
+bootJar {
+	enabled = false
+}
+
+jar {
+	enabled = true
+}
+mainClassName = 'es.javapagar.apps.Initializer'
+
+sourceSets {
+	main {
+		java { srcDirs = ['apps/main'] }
+		resources { srcDirs = ['apps/main/resources'] }
+	}
+
+	test {
+		java { srcDirs = ['apps/test'] }
+		resources { srcDirs = ['apps/test/resources'] }
+	}
 }
